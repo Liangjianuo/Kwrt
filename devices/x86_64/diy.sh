@@ -14,6 +14,6 @@ sed -i 's/DEFAULT_PACKAGES +=/DEFAULT_PACKAGES += kmod-usb-hid kmod-mmc kmod-sdh
 
 mv -f tmp/r81* feeds/kiddin9/
 
-sed -i 's/256/1024/g' target/linux/x86/image/Makefile
+sed -i 's/1024/2048/g' target/linux/x86/image/Makefile
 
 
