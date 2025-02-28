@@ -59,7 +59,7 @@ wget -N https://raw.githubusercontent.com/coolsnowwolf/lede/master/target/linux/
 
 wget -N https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/16414.patch -P devices/common/patches/
 
-# find target/linux/x86 -name "config*" -exec bash -c 'cat kernel.conf >> "{}"' \;
+find target/linux/x86 -name "config*" -exec bash -c 'cat kernel.conf >> "{}"' \;
 sed -i 's/max_requests 3/max_requests 20/g' package/network/services/uhttpd/files/uhttpd.config
 #rm -rf ./feeds/packages/lang/{golang,node}
 sed -i "s/tty\(0\|1\)::askfirst/tty\1::respawn/g" target/linux/*/base-files/etc/inittab
